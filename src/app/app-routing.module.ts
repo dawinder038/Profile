@@ -5,14 +5,16 @@ import { HeaderComponent } from './Components/header/header.component';
 import { InfoComponent } from './Components/info/info.component';
 import { ChangePasswordComponent } from './Components/change-password/change-password.component';
 import { SettingsComponent } from './Components/settings/settings.component';
+import { LoginComponent } from './Components/login/login.component';
 
 const routes: Routes = [
   {path:"Home",component:HomeComponent},
-  {path:"",redirectTo:"Home",pathMatch:"full"},
+  {path:"",redirectTo:"login",pathMatch:"full"},
   {path:"Header",component:HeaderComponent},
   {path:"info",component:InfoComponent},
   {path:"changePassword",component:ChangePasswordComponent},
-  {path:"settings",component:SettingsComponent}
+  {path:"settings",component:SettingsComponent},
+  {path:"login",component:LoginComponent}
 
 ];
 

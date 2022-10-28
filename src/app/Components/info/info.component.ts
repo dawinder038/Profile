@@ -17,6 +17,7 @@ export class InfoComponent implements OnInit {
   constructor(private modalService: BsModalService,private profileService:ProfileServiceService) { }
   ngOnInit(): void {
     this.initializeForm();
+    this.getUserData();
     // throw new Error('Method not implemented.');
   }
 
@@ -41,6 +42,11 @@ export class InfoComponent implements OnInit {
       console.log(result);
       this.bgImage = 'http://139.59.47.49:4004/' + result.filename;
       this.imageForm.controls['profile_image'].patchValue(result.filename);
+    });
+  }
+  getUserData() {
+    this.profileService.UserProfileGetApi().subscribe((result: any) => {
+      console.log(result);
     });
   }
 }
