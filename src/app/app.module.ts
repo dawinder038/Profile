@@ -11,7 +11,9 @@ import { InfoComponent } from './Components/info/info.component';
 import { ChangePasswordComponent } from './Components/change-password/change-password.component';
 import { SettingsComponent } from './Components/settings/settings.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms'
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,10 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     BrowserModule,
     AppRoutingModule,
     TooltipModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

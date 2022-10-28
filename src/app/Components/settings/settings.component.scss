@@ -44,3 +44,6 @@ input[type=checkbox]{
     align-items: center;
 
   }
+  .section{
+    min-height: calc(100vh - 280px);
+  }

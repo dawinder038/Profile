@@ -18,7 +18,7 @@ padding: 5px;
 .p-left{
     padding-left: 30px;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .logo{
         width: 34px;
         height: 34px;
@@ -27,7 +27,7 @@ padding: 5px;
         width: 24px;
         height: 24px;
     }
-    // .d-none{
-    //     display: none;
-    // }
+    .brothers{
+        display: none;
+    }
   }
