@@ -1,0 +1,36 @@
+.text-align{
+    text-align: center;
+}
+.card
+{
+width: 500px;
+}
+.card-box
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fdf0f1;
+}
+.padding{
+    padding:0px 20px;
+}
+.p-relative{
+    position: relative;
+    left: 93%;
+    top: 7px;
+}
+
+.p-absolute{
+    position: absolute;
+    width: 92%;
+}
+.mobile{
+    margin-top: 18px;
+}
+.message{
+    color: red;
+    text-align: center;
+    font-size: 24px;
+}

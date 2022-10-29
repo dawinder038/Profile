@@ -12,9 +12,11 @@ import { ChangePasswordComponent } from './Components/change-password/change-pas
 import { SettingsComponent } from './Components/settings/settings.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { LoginComponent } from './Components/login/login.component'
+import { LoginComponent } from './Components/login/login.component';
+import { SignUpComponent } from './Components/sign-up/sign-up.component'
+import { InterceptorService } from './Services/interceptor.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { LoginComponent } from './Components/login/login.component'
     InfoComponent,
     ChangePasswordComponent,
     SettingsComponent,
-    LoginComponent
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import { LoginComponent } from './Components/login/login.component'
     HttpClientModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

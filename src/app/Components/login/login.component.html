@@ -37,15 +37,14 @@
                             <path d="M12 10c-1.084 0-2 .916-2 2s.916 2 2 2 2-.916 2-2-.916-2-2-2z"></path>
                         </svg>
                     </div>
-                    <div class="password mb-2">
-                        <a></a>
-                        <a routerLink="/forgotPassword">Forgot Password</a>
-                    </div>
-                    <div class="mb-2">
+                    <div class="mb-2 mt-4">
                         <button type="button" (click)="login(myForm.value)" class="btn w-100"
-                            style="background-color: #e51b23; color:white;" routerLink="/Home">Login</button>
+                            style="background-color: #e51b23; color:white;" >Login</button>
                     </div>
                 </form>
+            </div>
+            <div>
+                <p class="text-align">Don't have an account?<a routerLink="/signUp">Sign Up</a></p>
             </div>
         </div>
     </div>

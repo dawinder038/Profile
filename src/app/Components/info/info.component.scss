@@ -47,9 +47,13 @@
 
 .p-relative {
     position: relative;
-    background-color: #7e1416;
-    top: -21px;
-    left: 123px;
+   
+}
+.p-absolute{
+    position: absolute;
+    bottom: 36px;
+    width: 100%;
+    left: 162px
 }
 #camera{
     display: none;   

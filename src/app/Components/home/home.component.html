@@ -4,7 +4,7 @@
         <h2 class="heading">My Account</h2>
     </div>
     <div class="row gy-3">
-        <div class="col-md-4" routerLink="/info">
+        <div class="col-md-4" (click)="info()">
             <div class="card shadow-sm">
                 <div class="card-body">
                     <img src="../../../assets/personal_info.png" class="mt-2" alt="personal_info">
@@ -38,7 +38,7 @@
     <div class="mt-5 logout-box">
         <div class="d-flex justify-content-between logout">
             <div>
-                <button class="btn logout-btn">Log out</button>
+                <button class="btn logout-btn" (click)="logout()">Log out</button>
             </div>
             <div>
                 <img class="p-right" src="../../../assets/logout.png" alt="Logout">

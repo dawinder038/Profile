@@ -17,6 +17,9 @@ export class ProfileServiceService {
     formData.append('file', file)
     return this.http.post(this.apiurl + 'upload/image', formData)
   }
+  signUpApi(data: any) {
+    return this.http.post(this.apiurl + "/account/register", data)
+  }
   loginApi(data: any) {
     return this.http.post(this.apiurl + "account/login", data);
   }
@@ -25,5 +28,8 @@ export class ProfileServiceService {
   }
   changePasswordApi(data:any){
     return this.http.put(this.apiurl+"account/change/password",data)
+  }
+  editProfileApi(data:any){
+    return this.http.put(this.apiurl+"edit-profile",data)
   }
 }

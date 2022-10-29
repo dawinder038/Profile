@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  image: any;
   constructor() { }
 
   ngOnInit(): void {
+    this.image = String(sessionStorage.getItem('image'));
+    console.log(this.image)
   }
+
 
 }

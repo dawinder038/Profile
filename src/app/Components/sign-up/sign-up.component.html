@@ -1,0 +1,81 @@
+<div class="container">
+  <div class="card-box">
+    <div class="card">
+      <div class="text-align card-body">
+        <div>
+          <img src="../../../assets/logo.png" alt="Logo">
+        </div>
+        <div>
+          <h3>Sign Up</h3>
+        </div>
+      </div>
+      <form [formGroup]="myForm">
+        <div class="padding">
+
+          <div class="mb-2">
+
+            <input type="email" class="form-control" placeholder="Email" formControlName="email" id="mobile">
+            <span style="color: red;" *ngIf="Email && Email.invalid && Email.touched">Please Enter Valid Email
+              Address</span>
+          </div>
+          <div class="mb-2">
+            <input [type]="show ? 'text' : 'password'" class="form-control  p-absolute " placeholder="Password" formControlName="password"
+              id="exampleInputPassword1">
+            <svg class="w-64 h-64 p-relative" width="24" height="24" (click)="password()"
+              xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" viewBox="0 0 24 24">
+              <path
+                d="M12 5c-7.633 0-9.927 6.617-9.948 6.684L1.946 12l.105.316C2.073 12.383 4.367 19 12 19s9.927-6.617 9.948-6.684l.106-.316-.105-.316C21.927 11.617 19.633 5 12 5zm0 11c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z">
+              </path>
+              <path d="M12 10c-1.084 0-2 .916-2 2s.916 2 2 2 2-.916 2-2-.916-2-2-2z"></path>
+            </svg>
+          </div>
+          <span style="color: red;" class="mt-3" class="relative"
+            *ngIf="Password && Password.invalid && Password.touched"> Password must contain
+            more than 8 characters, 1 upper case letter, and 1
+            special character</span>
+          <div class="mb-2 mt-3">
+            <input [type]="show ? 'text' : 'password'" class="form-control  p-absolute " placeholder="Confirm Password" formControlName="password"
+              id="exampleInputPassword1">
+            <svg class="w-64 h-64 p-relative" width="24" height="24" (click)="password()"
+              xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" viewBox="0 0 24 24">
+              <path
+                d="M12 5c-7.633 0-9.927 6.617-9.948 6.684L1.946 12l.105.316C2.073 12.383 4.367 19 12 19s9.927-6.617 9.948-6.684l.106-.316-.105-.316C21.927 11.617 19.633 5 12 5zm0 11c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z">
+              </path>
+              <path d="M12 10c-1.084 0-2 .916-2 2s.916 2 2 2 2-.916 2-2-.916-2-2-2z"></path>
+            </svg>
+          </div>
+          <!-- <span style="color: red;" class="mt-3" class="relative"
+            *ngIf="Password && Password.invalid && Password.touched"> Password must contain
+            more than 8 characters, 1 upper case letter, and 1
+            special character</span> -->
+          <div class="mb-2">
+            <input type="text" class="form-control mobile" placeholder="Mobile" formControlName="mobile_number"
+              id="exampleInputEmail1">
+            <span style="color: red;" *ngIf="Mobile && Mobile.invalid && Mobile.touched">Please Enter only valid Mobile
+              Number</span>
+          </div>
+          <div class="mb-2">
+            <select class="form-select" aria-label="Default select example" formControlName="country_code">
+              <option selected>Country/Region</option>
+              <option value="+91">+91</option>
+              <option value="+92">+92</option>
+              <option value="+93">+93</option>
+            </select>
+            <span style="color: red;" *ngIf="Country && Country.invalid && Country.touched">Required</span>
+          </div>
+          <div class="" >
+            <p class=" message" >{{message}}</p>
+          </div>
+          <div>
+            <button type="button" [disabled]="myForm.invalid" (click)="signUp(myForm.value)"
+              class="btn w-100 " style="background-color:  #e51b23;">Sign Up</button>
+          </div>
+          <div class="text-align mt-2">
+            <p class="small-text">You have already account in? <a style="color: blue;" routerLink="/login">Sign In</a>
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
