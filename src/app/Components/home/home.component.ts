@@ -17,6 +17,9 @@ info(){
   setTimeout(() => {
     this.router.navigateByUrl('/info');
   }, 2000);
+setTimeout(() => {
+  window.location.reload();
+}, 3000);
 
 }
 logout(){

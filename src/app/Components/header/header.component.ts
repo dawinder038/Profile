@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, setTestabilityGetter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,12 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   image: any;
+  firstName: any;
+lastName: any;
   constructor() { }
 
   ngOnInit(): void {
     this.image = String(sessionStorage.getItem('image'));
-    console.log(this.image)
+    this.firstName = String(sessionStorage.getItem('firstName'))
+    this.lastName = String(sessionStorage.getItem('lastName'))
   }
-
-
 }

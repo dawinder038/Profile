@@ -13,6 +13,7 @@ export class SignUpComponent implements OnInit {
   myForm!: FormGroup;
   message:any;
   show: boolean = false;
+  show2: boolean = false;
   constructor(private modalService: BsModalService, private Route: Router, private profileService: ProfileServiceService) { }
   ngOnInit(): void {
     this.initializeForm();
@@ -53,6 +54,9 @@ export class SignUpComponent implements OnInit {
   }
   password() {
     this.show = !this.show;
+  }
+  password2() {
+    this.show2 = !this.show2;
   }
   get Email(){
     return this.myForm.get('email');

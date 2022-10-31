@@ -26,6 +26,7 @@ export class InfoComponent implements OnInit {
   ngOnInit(): void {
     this.initializeForm();
     this.getUserData();
+    
     // throw new Error('Method not implemented.');
   }
 
@@ -64,10 +65,12 @@ export class InfoComponent implements OnInit {
       this.image=result.profile.profile_image;
       this.bgImage=this.image;
       sessionStorage.setItem('image',this.bgImage);
-      
+      sessionStorage.setItem('firstName',this.data.first_name);
+      sessionStorage.setItem('lastName',this.data.last_name);
     });
   }
   editProfile(data:any){
+    console.log(data)
     let payload={
       first_name:data.first_name,
       last_name:data.last_name,
@@ -77,14 +80,10 @@ export class InfoComponent implements OnInit {
       mobile_number:data.mobile_number,
       profile_image:this.bgImage
     }
-    console.log(payload)
     this.profileService.editProfileApi(payload).subscribe((result:any)=>{
       console.log(result);
-      // window.location.reload();
+      window.location.reload();
     this.getUserData();
     })
-
   }
-  
-
 }

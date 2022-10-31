@@ -16,7 +16,8 @@
 
             <input type="email" class="form-control" placeholder="Email" formControlName="email" id="mobile">
             <span style="color: red;" *ngIf="Email && Email.invalid && Email.touched">Please Enter Valid Email
-              Address</span>
+              Address
+            </span>
           </div>
           <div class="mb-2">
             <input [type]="show ? 'text' : 'password'" class="form-control  p-absolute " placeholder="Password" formControlName="password"
@@ -34,9 +35,9 @@
             more than 8 characters, 1 upper case letter, and 1
             special character</span>
           <div class="mb-2 mt-3">
-            <input [type]="show ? 'text' : 'password'" class="form-control  p-absolute " placeholder="Confirm Password" formControlName="password"
-              id="exampleInputPassword1">
-            <svg class="w-64 h-64 p-relative" width="24" height="24" (click)="password()"
+            <input [type]="show2 ? 'text' : 'password'" class="form-control  p-absolute " placeholder="Confirm Password" formControlName="password"
+              id="exampleInputPassword2">
+            <svg class="w-64 h-64 p-relative" width="24" height="24" (click)="password2()"
               xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" viewBox="0 0 24 24">
               <path
                 d="M12 5c-7.633 0-9.927 6.617-9.948 6.684L1.946 12l.105.316C2.073 12.383 4.367 19 12 19s9.927-6.617 9.948-6.684l.106-.316-.105-.316C21.927 11.617 19.633 5 12 5zm0 11c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4z">
